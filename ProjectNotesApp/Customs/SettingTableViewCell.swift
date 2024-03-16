@@ -8,10 +8,10 @@
 import UIKit
 
 protocol TableVIewCellDelegate {
-    func switchControlVAlueChanged(to isOn: Bool,  in cell: TableViewCell)
+    func switchControlVAlueChanged(to isOn: Bool,  in cell: SettingTableViewCell)
 }
 
-class TableViewCell: UITableViewCell {
+class SettingTableViewCell: UITableViewCell {
     
     var delegate: TableVIewCellDelegate?
     
@@ -25,7 +25,6 @@ class TableViewCell: UITableViewCell {
     
     private lazy var label: UILabel = {
         let view = UILabel()
-        view.text =  "Язык"
         view.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textColor = .black
@@ -35,7 +34,6 @@ class TableViewCell: UITableViewCell {
     
     private lazy var image: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "language")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
         
